@@ -8,6 +8,6 @@ fun esPalindromo(cadena: String): Boolean {
 }
 
 fun main() {
-    val texto = "Radar Hola"
+    val texto = "Radar Seres"
     println("¿Es palíndromo? ${esPalindromo(texto)}")
 }
