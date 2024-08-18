@@ -1,14 +1,13 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+fun esPalindromo(cadena: String): Boolean {
+    val cadenaLimpia = cadena
+        .replace(Regex("[^A-Za-z0-9]"), "")
+        .toLowerCase()
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+
+    return cadenaLimpia == cadenaLimpia.reversed()
+}
+
+fun main() {
+    val texto = "A man, a plan, a canal, Panama!"
+    println("¿Es palíndromo? ${esPalindromo(texto)}")
 }
